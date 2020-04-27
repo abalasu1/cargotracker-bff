@@ -15,7 +15,7 @@ class BadGateway extends HttpError {
 @Path('cargo-items')
 export class CargoItemsController {
   @Inject
-  service: CargoItemsMockService;
+  service: CargoItemsMockService;  
 
   @GET
   async listCargoItems(): Promise<CargoItemModel[]> {
