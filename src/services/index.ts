@@ -11,3 +11,6 @@ export * from './task.service';
 
 Container.bind(TaskApi).to(TaskService).scope(Scope.Singleton);
 Container.bind(ProjectApi).to(ProjectService).scope(Scope.Singleton);
+
+export * from './cargo-items.api';
+export * from './cargo-items-mock.service';
