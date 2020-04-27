@@ -23,7 +23,7 @@ export class CargoItemsService implements CargoItemsApi {
 
   async listCargoItems(): Promise<CargoItemModel[]> {
     try {
-      const response: Response = await get(this.config.baseUrl + '/cargo-items')
+      const response: Response = await get(this.config.baseUrl + '/cargobooking/getallCargo')
         .set('Accept', 'application/json');
 
       return this.mapCargoItems(response.body);
