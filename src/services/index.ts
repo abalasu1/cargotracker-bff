@@ -14,3 +14,4 @@ Container.bind(ProjectApi).to(ProjectService).scope(Scope.Singleton);
 
 export * from './cargo-items.api';
 export * from './cargo-items-mock.service';
+export * from './cargo-items.service';

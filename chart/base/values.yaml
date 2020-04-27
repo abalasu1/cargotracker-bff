@@ -3,6 +3,8 @@
 # Declare variables to be passed into your templates.
 global: {}
 
+serviceUrl: "cargotracker-booking.cargotracker-booking:80"
+
 replicaCount: 1
 logLevel: "debug"
 
