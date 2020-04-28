@@ -7,4 +7,10 @@ export class CargoItem implements CargoItemModel {
   bookingId: string;
   @Field(type => Float)
   bookingAmount: number;
+  @Field()
+  origin: string;
+  @Field()
+  destination: string;   
+  @Field()
+  arrivaldeadline: string;   
 }

@@ -31,9 +31,9 @@ describe('cargo-item.controller', () => {
   describe('given GET /cargo-items', () => {
     describe('when service is successful', () => {
       const expectedResult = [
-        { bookingId: 'ICBAEO1', bookingAmount: 100 },
-        { bookingId: 'ICBAEO2', bookingAmount: 200 },
-        { bookingId: 'ICBAEO3', bookingAmount: 300 }
+        { bookingId: 'ICBAEO1', bookingAmount: 100, origin: 'CNHKG', destination: "JFKC", arrivaldeadline: '2020-04-30' },
+        { bookingId: 'ICBAEO2', bookingAmount: 200, origin: 'CNHKG', destination: "JFKC", arrivaldeadline: '2020-04-30' },
+        { bookingId: 'ICBAEO3', bookingAmount: 300, origin: 'CNHKG', destination: "JFKC", arrivaldeadline: '2020-04-30' }
       ];
       beforeEach(() => {
         service_listCargoItems.mockResolvedValue(expectedResult);

@@ -3,7 +3,7 @@ import {GET, Path} from 'typescript-rest';
 import {HttpError} from 'typescript-rest/dist/server/model/errors';
 
 import {CargoItemModel} from '../models';
-import {CargoItemsApi} from '../services';
+import {CargoItemsService} from '../services';
 import {LoggerApi} from '../logger';
 
 class BadGateway extends HttpError {
@@ -16,7 +16,7 @@ class BadGateway extends HttpError {
 @Path('cargo-items')
 export class CargoItemsController {
   @Inject
-  service: CargoItemsApi;
+  service: CargoItemsService;
   @Inject
   logger: LoggerApi;
 

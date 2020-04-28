@@ -9,6 +9,7 @@ import {LoggerApi} from '../logger';
 export class BackendCargoItem {
   'bookingId'?: string;
   'bookingAmount'?: number;
+  'routeSpecification'?: string;
 }
 
 export class CargoItemsService implements CargoItemsApi {
@@ -38,9 +39,16 @@ export class CargoItemsService implements CargoItemsApi {
   }
 
   mapCargoItem(item: BackendCargoItem): CargoItemModel {
+    let bookingId = JSON.parse(JSON.stringify(item.bookingId));
+    let bookingAmount = JSON.parse(JSON.stringify(item.bookingAmount));
+    let routeSpecification = JSON.parse(JSON.stringify(item.routeSpecification));
+    
     return {
-      bookingId: item.bookingId,
-      bookingAmount: item.bookingAmount,
+      bookingId: bookingId.bookingId,
+      bookingAmount: bookingAmount.bookingAmount,
+      origin: routeSpecification.origin.unLocCode,
+      destination: routeSpecification.destination.unLocCode,
+      arrivaldeadline: routeSpecification.arrivalDeadline
     };
   }
 }
