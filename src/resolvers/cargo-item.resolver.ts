@@ -4,12 +4,12 @@ import {Inject} from 'typescript-ioc';
 import {resolverManager} from './_resolver-manager';
 import {CargoItem} from '../schemas';
 import {CargoItemModel} from '../models';
-import {CargoItemsApi} from '../services';
+import {CargoItemsService} from '../services';
 
 @Resolver(of => CargoItem)
 export class CargoItemResolver {
   @Inject
-  service: CargoItemsApi;
+  service: CargoItemsService;
 
   @Query(returns => [CargoItem])
   async cargoItems(): Promise<CargoItemModel[]> {
