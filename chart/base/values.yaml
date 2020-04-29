@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 global: {}
 
-serviceUrl: "cargotracker-booking.cargotracker-booking:80"
+serviceUrl: "cargotracker-booking.cargotracker-backend:80"
 
 replicaCount: 1
 logLevel: "debug"
@@ -39,10 +39,10 @@ ingress:
 #  tlsSecretName: ""
 
 vcsInfo:
-  repoUrl: ""
-  branch: ""
+  repoUrl: "https://github.com/abalasu1/cargotracker-bff.git"
+  branch: "master"
 
-partOf: ""
+partOf: "cargotracker-frontend"
 
 connectsTo: ""
 
