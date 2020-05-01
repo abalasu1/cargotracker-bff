@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 global: {}
 
-serviceUrl: "cargotracker-booking.cargotracker-backend:80"
+serviceUrl: "cargotracker-booking.cargotracker-backend-dev:80"
 
 replicaCount: 1
 logLevel: "debug"
@@ -42,7 +42,7 @@ vcsInfo:
   repoUrl: "https://github.com/abalasu1/cargotracker-bff.git"
   branch: "master"
 
-partOf: "cargotracker-frontend"
+partOf: "cargotracker-frontend-dev"
 
 connectsTo: ""
 
