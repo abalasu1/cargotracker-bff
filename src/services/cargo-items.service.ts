@@ -10,6 +10,7 @@ export class BackendCargoItem {
   'bookingId'?: string;
   'bookingAmount'?: number;
   'routeSpecification'?: string;
+  'delivery'?: string;
 }
 
 export class CargoItemsService implements CargoItemsApi {
@@ -42,13 +43,16 @@ export class CargoItemsService implements CargoItemsApi {
     let bookingId = JSON.parse(JSON.stringify(item.bookingId));
     let bookingAmount = JSON.parse(JSON.stringify(item.bookingAmount));
     let routeSpecification = JSON.parse(JSON.stringify(item.routeSpecification));
+    let delivery = JSON.parse(JSON.stringify(item.delivery));
     
     return {
       bookingId: bookingId.bookingId,
       bookingAmount: bookingAmount.bookingAmount,
       origin: routeSpecification.origin.unLocCode,
       destination: routeSpecification.destination.unLocCode,
-      arrivaldeadline: routeSpecification.arrivalDeadline
+      arrivaldeadline: routeSpecification.arrivalDeadline,
+      routingStatus: delivery.routingStatus,
+      transportStatus: delivery.transportStatus
     };
   }
 }

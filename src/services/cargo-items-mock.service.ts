@@ -9,21 +9,27 @@ export class CargoItemsMockService implements CargoItemsApi {
         bookingAmount: 100,
         origin: 'CNHKG', 
         destination: 'JFKC', 
-        arrivaldeadline: '2020-04-30'
+        arrivaldeadline: '2020-04-30',
+        routingStatus: 'ROUTED',
+        transportStatus: 'RECEIVED'
       },
       {
         bookingId: 'ICBAEO2',
         bookingAmount: 200,
         origin: 'CNHKG', 
         destination: 'JFKC', 
-        arrivaldeadline: '2020-04-30'
+        arrivaldeadline: '2020-04-30',
+        routingStatus: 'ROUTED',
+        transportStatus: 'CLAIMED'
       },
       {
         bookingId: 'ICBAEO3',
         bookingAmount: 300,
         origin: 'CNHKG', 
         destination: 'JFKC', 
-        arrivaldeadline: '2020-04-30'
+        arrivaldeadline: '2020-04-30',
+        routingStatus: 'ROUTED',
+        transportStatus: 'CUSTOMS'
       }
     ];
   }

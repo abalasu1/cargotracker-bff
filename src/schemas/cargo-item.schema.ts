@@ -12,5 +12,9 @@ export class CargoItem implements CargoItemModel {
   @Field()
   destination: string;   
   @Field()
-  arrivaldeadline: string;   
+  arrivaldeadline: string;
+  @Field()
+  routingStatus: string;
+  @Field()
+  transportStatus: string;       
 }

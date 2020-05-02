@@ -3,5 +3,7 @@ export class CargoItemModel {
     bookingAmount: number;
     origin: string;
     destination: string;   
-    arrivaldeadline: string;     
+    arrivaldeadline: string;
+    routingStatus: string;
+    transportStatus: string;     
 }
