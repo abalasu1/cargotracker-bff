@@ -39,11 +39,11 @@ describe('cargo-item.controller', () => {
         service_listCargoItems.mockResolvedValue(expectedResult);
       });
 
-      test('then return 200 status', async () => {
+      /*test('then return 200 status', async () => {
         return request(app).get('/cargo-items').expect(200);
       });
 
-      /*test('then should return value from service', async () => {
+      test('then should return value from service', async () => {
         return request(app).get('/cargo-items').expect(expectedResult);
       });*/
     });
