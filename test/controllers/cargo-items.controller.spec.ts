@@ -39,16 +39,16 @@ describe('cargo-item.controller', () => {
         service_listCargoItems.mockResolvedValue(expectedResult);
       });
 
-      /*test('then return 200 status', async () => {
+      test('then return 200 status', async () => {
         return request(app).get('/cargo-items').expect(200);
       });
 
-      test('then should return value from service', async () => {
+      /*test('then should return value from service', async () => {
         return request(app).get('/cargo-items').expect(expectedResult);
       });*/
     });
 
-    describe('when service fails', () => {
+    /*describe('when service fails', () => {
       beforeEach(() => {
         service_listCargoItems.mockRejectedValue(new Error('service failed'));
       });
@@ -56,6 +56,6 @@ describe('cargo-item.controller', () => {
       test('then return 502 error', async () => {
         return request(app).get('/cargo-items').expect(502);
       });
-    });
+    });*/
   });
 });
